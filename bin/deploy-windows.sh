@@ -12,7 +12,7 @@ jre_dirname="jdk-17.0.11+9-jre"
 # 压缩包文件名
 artifacts="sonovel-windows.tar.gz"
 # -DskipTests：不执行测试用例。-Dmaven.test.skip=true：不执行测试用例，也不编译测试用例类
-maven_command="mvn clean package -Dmaven.test.skip=true -DjrePath=runtime"
+maven_command="mvn clean package -Dmaven.test.skip=true -DjrePath=runtime -Denv=prod"
 
 # 项目根目录，根据当前文件所在路径获取相对路径
 project_path=$(
@@ -26,9 +26,9 @@ mkdir -p dist/
 
 $maven_command
 # 拷贝配置文件、使用说明
-cp config.ini input/readme.txt target/SoNovel
+cp config.ini bundle/SoNovel.l4j.ini bundle/readme.txt target/SoNovel
 # 拷贝环境依赖（JRE）
-cp "input/$jre_filename" target/SoNovel
+cp "bundle/$jre_filename" target/SoNovel
 
 cd target/SoNovel
 tar zxf "$jre_filename" && rm "$jre_filename"

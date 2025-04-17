@@ -26,7 +26,7 @@ jpackage \
 --vendor "FreeOK" \
 --main-jar "app-jar-with-dependencies.jar"
 
-cp config.ini input/readme.txt dist/SoNovel
+cp config.ini bundle/readme.txt dist/SoNovel
 rm dist/SoNovel/*.ico
 
 echo "开始压缩打包"

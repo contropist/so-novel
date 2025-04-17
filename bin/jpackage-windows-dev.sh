@@ -35,4 +35,4 @@ jpackage \
 --main-jar "app-jar-with-dependencies.jar"
 
 mkdir -p dist/SoNovel
-cp config.ini input/readme.txt dist/SoNovel
+cp config.ini bundle/readme.txt dist/SoNovel

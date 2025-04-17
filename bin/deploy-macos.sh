@@ -29,8 +29,8 @@ mkdir "target/$dist_dirname_arm64"
 mkdir "target/$dist_dirname_x64"
 
 # 复制配置文件、使用说明、启动脚本、JRE
-cp config.ini input/readme.txt input/macos-run.sh "input/$jre_filename_arm64" "target/$dist_dirname_arm64"
-cp config.ini input/readme.txt input/macos-run.sh "input/$jre_filename_x64" "target/$dist_dirname_x64"
+cp config.ini bundle/readme.txt bundle/macos-run.sh "bundle/$jre_filename_arm64" "target/$dist_dirname_arm64"
+cp config.ini bundle/readme.txt bundle/macos-run.sh "bundle/$jre_filename_x64" "target/$dist_dirname_x64"
 
 # 复制 jar
 cd target

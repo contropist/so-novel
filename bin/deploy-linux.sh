@@ -25,7 +25,7 @@ mkdir -p dist
 mkdir "target/$dist_dirname"
 
 # 复制配置文件、使用说明、启动脚本、JRE
-cp config.ini input/readme.txt input/linux-run.sh "input/$jre_filename" "target/$dist_dirname"
+cp config.ini bundle/readme.txt bundle/linux-run.sh "bundle/$jre_filename" "target/$dist_dirname"
 
 cd target
 # 重命名
