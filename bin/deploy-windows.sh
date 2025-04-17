@@ -27,6 +27,7 @@ mkdir -p dist/
 $maven_command
 # 拷贝配置文件、使用说明
 cp config.ini bundle/SoNovel.l4j.ini bundle/readme.txt target/SoNovel
+cp -r bundle/fonts target/SoNovel/
 # 拷贝环境依赖（JRE）
 cp "bundle/$jre_filename" target/SoNovel
 
